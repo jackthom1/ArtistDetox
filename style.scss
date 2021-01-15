@@ -1,0 +1,440 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$primary: #09090c;
+$secondary: #161616;
+$white: white;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+  background: $primary;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  color: $white;
+  font-weight: 500;
+}
+
+//* NAVIGATION *\\
+
+.navBar {
+  width: 100vw;
+  height: 50px;
+  background: $primary;
+  // color: $white;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  // box-shadow: 5px 1px 2px $white;
+  a {
+    text-decoration: none;
+  }
+}
+.navContent {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 50px;
+  background: $primary;
+  border-top: 1px solid $white;
+  border-bottom: 1px solid $white;
+
+  li a {
+    text-decoration: none;
+    color: $white;
+  }
+  transform: scale(0);
+  // transition:
+  //     transform ease-out 150ms;
+}
+.navLinks {
+  font-size: 1.5rem;
+  list-style: none;
+  padding: 12px;
+}
+.navButton {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 5%;
+  color: $white;
+  transition: transform ease-in-out 250ms;
+}
+.socials {
+  display: flex;
+}
+//* HERO *\\
+
+.homeBody {
+  background: url("./images/homeBG.jpeg"), $secondary;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+}
+
+.hero {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+}
+.heroBtn {
+  width: 20rem;
+}
+//* SHOWS CONTENT *\\
+
+.showsContainer {
+  width: 100vw;
+  padding: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.showContent {
+  margin-bottom: 30px;
+  width: 80%;
+  padding: 10px;
+  background: $primary;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 10px 10px $primary;
+  p {
+    font-weight: 300;
+  }
+}
+.showImg {
+  width: 100%;
+  height: auto;
+}
+.showTitle {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+//* REVIEWS *\\
+
+.section2 {
+  height: auto;
+  margin-top: 50px;
+}
+
+.reviewsBar {
+  position: fixed;
+  top: 50px;
+  height: 30px;
+  background: $primary;
+  border-bottom: 1px solid $white;
+  border-top: 1px solid $white;
+  color: $white;
+  font-size: 1.2rem;
+}
+
+//* AudioBiopics *\\
+
+.audiobiopics {
+  width: 100%;
+  height: 100vh;
+  padding-top: 50px;
+}
+.titleSection {
+  background: url("./images/homeImg2.jpeg");
+  background-size: cover;
+  background-position: 40% 40%;
+
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1,
+  h3 {
+    color: $white;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px $secondary;
+  }
+}
+.audioContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//* LIVE PAGE *\\
+
+.liveContainer {
+  width: 100%;
+  height: auto;
+  padding-top: 50px;
+}
+.liveTitle {
+  background: url("./images/homeImg1.jpeg");
+  background-size: cover;
+  background-position: 40% 40%;
+  font-size: 2rem;
+}
+.liveContent {
+  margin: 100px 0 25px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.profileImg {
+  display: none;
+  width: 60%;
+  image-rendering: auto;
+  margin-top: 20px;
+}
+.liveTitle {
+  text-align: center;
+}
+.commentSection {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  background: grey;
+  border-radius: 1rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.comment {
+  width: 100%;
+  height: 30vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.makeComment {
+  width: 100%;
+  height: 100%;
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+}
+.commentBox {
+  width: 80%;
+  height: auto;
+  font-size: 1.4rem;
+  margin-right: 5px;
+  background: $white;
+  border-radius: 0.2rem;
+  border: none;
+  &::placeholder {
+    padding-left: 10px;
+    color: grey;
+  }
+}
+.commentResult {
+  background: $primary;
+  margin: 2px 0 2px 0;
+  padding: 2px 2px 2px 25px;
+  color: $white;
+  font-size: 1.5rem;
+  width: 95%;
+  border-radius: 0.6rem;
+}
+.commentButton {
+  padding: 10px;
+  background: $white;
+  border: none;
+  font-weight: bold;
+  transition: background 0.2s ease-out;
+  border-radius: 0.2rem;
+  border: none;
+  &:hover {
+    background: grey;
+  }
+}
+//* Mixes *\\
+
+.mixes {
+  @extend .audiobiopics;
+}
+.mixTitle {
+  background: url("./images/homeImg3.jpeg");
+  background-size: cover;
+  background-position: 40% 40%;
+}
+
+//* Archive *\\
+.archive {
+  @extend .audiobiopics;
+}
+.archiveTitle {
+  background: url("./images/homeImg4.jpeg");
+  background-size: cover;
+  background-position: 40% 40%;
+}
+
+//* BLOG SECTION *\\
+
+.blog {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+.posts {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+.postImg {
+  width: 100%;
+  height: auto;
+}
+.title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.login {
+  padding-top: 100px;
+}
+
+//* UPLOAD PAGE *\\
+
+.postForm {
+  padding-top: 100px;
+  width: 40%;
+  margin: auto;
+  textarea {
+    margin-top: 25px;
+    width: 100%;
+  }
+  * {
+    margin: 10px;
+    padding: 5px;
+  }
+}
+
+//* ATTRIBUTES *\\
+
+.listenNowBtn {
+  width: 80%;
+  background: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  border: solid 2px $white;
+  border-radius: 5px;
+  color: $white;
+  margin-top: 10px;
+  padding: 10px;
+  align-self: center;
+  &:hover {
+    background: $primary;
+    border: solid 2px $primary;
+  }
+}
+
+.seperator {
+  //border: 5px solid $primary;
+  background: $primary;
+  height: 2px;
+  margin-bottom: 10px;
+}
+
+.images {
+  width: 100%;
+  height: auto;
+}
+
+//* MEDIA QRYS *\\
+
+@media (min-width: 700px) {
+  .showContent {
+    width: 60%;
+  }
+  .posts {
+    width: 60%;
+  }
+  .homeBody {
+    background-position: top center;
+  }
+  .heroBtn {
+    width: 20rem;
+  }
+}
+@media (min-width: 1000px) {
+  .showsContainer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .showContent {
+    width: 25%;
+  }
+  .profileImg {
+    display: block;
+  }
+  .spreaker-player {
+    width: 60%;
+  }
+  .posts {
+    width: 40%;
+  }
+  .audioContent {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .reviewsSection {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 90%;
+  }
+  .section2 {
+    height: 60vh;
+  }
+
+  .commentSection {
+    width: 50%;
+  }
+}
+@media (min-width: 1300px) {
+  .listenNowBtn {
+    width: 20rem;
+  }
+  .section2 {
+    height: 50vh;
+  }
+  .commentSection {
+    width: 45%;
+  }
+}
+@media (min-width: 1500px) {
+  .profileImg {
+    width: 50%;
+  }
+}
